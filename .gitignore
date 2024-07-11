@@ -3,3 +3,4 @@ diario/
 
 # ignore build script
 build.sh
+push.sh
