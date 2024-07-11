@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directory where Markdown files are located
-markdown_dir="./blog"
+markdown_dir="./diario"
 
 # Output HTML file
 output_html="index.html"
@@ -83,11 +83,13 @@ done
 # End of HTML content
 cat <<EOF >> "${output_html}"
 <hr />
+    <footer>
+        <small>
+            <p>contacto dziafr@gmail.com</p>
+            <p>actualizado $(date "+%d/%m/%y")</p>
+        </small>
+    </footer>
 </body>
-<footer>
-<p>contact dziafr@gmail.com.</p>
-<p>frdz &mdash; updated $(date "+%m/%d/%y")</p>
-</footer>
 </html>
 EOF
 

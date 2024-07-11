@@ -1,2 +1,5 @@
 # ignore folder that contains md files
 diario/
+
+# ignore build script
+build.sh
