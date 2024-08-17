@@ -10,7 +10,7 @@ jobs:
       run: |
          chmod +x ./scripts/build.sh
          ./scripts/build.sh
-      working-directory: ../
+      #working-directory: ../
       shell: bash
 
   upload-artifact:
