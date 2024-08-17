@@ -16,7 +16,12 @@ jobs:
   upload-artifact:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/upload-artifact@v4.3.6
+    - uses: actions/upload-artifact@v4
+      with:
+        name: html
+        path: ../index.html
+        if-no-files-found: error
+        overwrite: true
 
   download-artifact:
     runs-on: ubuntu-latest
