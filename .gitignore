@@ -1,6 +1,0 @@
-# ignore folder that contains md files
-diario/
-
-# ignore build and push script
-build.sh
-push.sh
