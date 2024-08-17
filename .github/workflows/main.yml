@@ -1,0 +1,13 @@
+name: create-html
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run build script
+      run: |
+         chmod +x ./scripts/build.sh
+         ./scripts/build.sh
+      shell: bash
