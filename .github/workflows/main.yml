@@ -4,8 +4,9 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
+    
     steps:
-    - uses: actions/checkout@v2
+    
     - name: Run build script
       shell: bash
       run: |
@@ -16,13 +17,9 @@ jobs:
          make [INSTALL_PREFIX=/prefix]
          sudo make install
          cd ~/work/fredzia.github.io/fredzia.github.io/scripts
-         ./build.sh
-         ls
-
-  upload-artifact:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
+         ls -1 -d "$PWD/"*
+    - uses: actions/checkout@v2
+         
     - name: Upload
       shell: bash
       run: |
@@ -36,9 +33,6 @@ jobs:
         if-no-files-found: error
         overwrite: true
 
-  download-artifact:
-    needs: upload-artifact
-    runs-on: ubuntu-latest
-    steps:
+    - name: Download artifact
     - uses: actions/download-artifact@v4.1.8
           
