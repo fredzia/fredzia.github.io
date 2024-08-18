@@ -16,8 +16,9 @@ jobs:
          cd cmark-0.29.0
          make [INSTALL_PREFIX=/prefix]
          sudo make install
+         cd ~
          ls
-         .~/runner/work/fredzia.github.io/fredzia.github.io/scripts/build.sh
+         ./runner/work/fredzia.github.io/fredzia.github.io/scripts/build.sh
 
   upload-artifact:
     needs: build
