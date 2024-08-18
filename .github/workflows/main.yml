@@ -22,15 +22,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - name: Upload
-      shell: bash
-      run: |
-        cd ~
-        ls
+    - name: Upload HTML
     - uses: actions/upload-artifact@v4
       with:
         name: html
-        path: index.html
+        path: ~/work/fredzia.github.io/fredzia.github.io/index.html
         if-no-files-found: error
         overwrite: true
 
