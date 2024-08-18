@@ -34,9 +34,9 @@ jobs:
         uses: actions/download-artifact@v4
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4.0.0
-        with:
+      - run: ls
+      - with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-
+          publish_dir: /
             
           
