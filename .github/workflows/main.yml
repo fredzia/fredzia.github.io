@@ -7,17 +7,15 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run build script
-      working-directory: scripts/
       shell: bash
       run: |
-         chmod +x ./build.sh
+         chmod +x ./scripts/build.sh
          curl -LJO https://github.com/commonmark/cmark/archive/0.29.0.tar.gz
          tar xzf cmark-0.29.0.tar.gz
          cd cmark-0.29.0
          make [INSTALL_PREFIX=/prefix]
          sudo make install
          cd ~/work/fredzia.github.io/fredzia.github.io/scripts
-         ls
          ./build.sh
 
   upload-artifact:
@@ -27,7 +25,7 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
         name: html
-        path: ./index.html
+        path: index.html
         if-no-files-found: error
         overwrite: true
 
