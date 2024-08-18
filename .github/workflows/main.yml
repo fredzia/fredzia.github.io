@@ -25,7 +25,9 @@ jobs:
     - name: Upload
       shell: bash
       run: |
-        cd ~/work/fredzia.github.io/fredzia.github.io
+        cd ~
+        ls
+        cd work/fredzia.github.io/fredzia.github.io/
         ls
     - uses: actions/upload-artifact@v4
       with:
