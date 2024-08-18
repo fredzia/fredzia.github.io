@@ -19,7 +19,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: html
+          name: index
           path: ~/work/fredzia.github.io/fredzia.github.io/index.html
           if-no-files-found: error
           overwrite: true
@@ -34,6 +34,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
 
             
           
