@@ -6,28 +6,27 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    
-    - name: Checkout
-    - uses: actions/checkout@v2
-    - run: |
-         chmod +x ./scripts/build.sh
-         curl -LJO https://github.com/commonmark/cmark/archive/0.29.0.tar.gz
-         tar xzf cmark-0.29.0.tar.gz
-         cd cmark-0.29.0
-         make [INSTALL_PREFIX=/prefix]
-         sudo make install
-         cd ~/work/fredzia.github.io/fredzia.github.io/scripts
-         ls -1 -d "$PWD/"*
-    - shell: bash
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - run: |
+           chmod +x ./scripts/build.sh
+           curl -LJO https://github.com/commonmark/cmark/archive/0.29.0.tar.gz
+           tar xzf cmark-0.29.0.tar.gz
+           cd cmark-0.29.0
+           make [INSTALL_PREFIX=/prefix]
+           sudo make install
+           cd ~/work/fredzia.github.io/fredzia.github.io/scripts
+           ls -1 -d "$PWD/"*
+    #shell: bash
          
-    - name: Upload
-      uses: actions/upload-artifact@v4
-      with:
-        name: html
-        path: ~/work/fredzia.github.io/fredzia.github.io/index.html
-        if-no-files-found: error
-        overwrite: true
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: html
+          path: ~/work/fredzia.github.io/fredzia.github.io/index.html
+          if-no-files-found: error
+          overwrite: true
 
-    - name: Download artifact
-      uses: actions/download-artifact@v4.1.8
+      - name: Download artifact
+        uses: actions/download-artifact@v4.1.8
           
