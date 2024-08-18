@@ -16,7 +16,6 @@ jobs:
            sudo make install
            cd ~/work/fredzia.github.io/fredzia.github.io/scripts
            ./build.sh
-         
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
@@ -34,6 +33,10 @@ jobs:
         with:
           path: ~/work/fredzia.github.io/fredzia.github.io/
       - run: |
+           cd html/
            ls
            ./scripts/push.sh
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4.0.0
+            
           
