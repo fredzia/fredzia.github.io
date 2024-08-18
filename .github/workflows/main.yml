@@ -14,7 +14,7 @@ jobs:
          cd cmark-0.29.0
          make [INSTALL_PREFIX=/prefix]
          sudo make install
-         cd ~ && cd scripts/ && ./build.sh
+         cd ~ && ls && cd scripts/ && ./build.sh
       #working-directory: ../
       shell: bash
 
