@@ -27,5 +27,10 @@ jobs:
           overwrite: true
 
       - name: Download artifact
-        uses: actions/download-artifact@v4.1.8
+        uses: actions/download-artifact@v4
+        with:
+          path: ~/work/fredzia.github.io/fredzia.github.io/
+      - run: |
+           ls
+           ./scripts/push.sh
           
