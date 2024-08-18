@@ -32,14 +32,11 @@ jobs:
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v4
-      - run: |
-           cd ~/work/fredzia.github.io/fredzia.github.io/index/
-           ls
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./index/
+          publish_dir: ~/work/fredzia.github.io/fredzia.github.io/index/index.html
 
             
           
