@@ -17,6 +17,7 @@ jobs:
          sudo make install
          cd ~/work/fredzia.github.io/fredzia.github.io/scripts
          ./build.sh
+         ls
 
   upload-artifact:
     needs: build
