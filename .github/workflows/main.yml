@@ -17,9 +17,8 @@ jobs:
            sudo make install
            cd ~/work/fredzia.github.io/fredzia.github.io/scripts
            ls -1 -d "$PWD/"*
-    #shell: bash
          
-      - name: Upload
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: html
