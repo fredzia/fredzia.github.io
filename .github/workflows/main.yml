@@ -7,7 +7,10 @@ jobs:
     
     steps:
     
-    - name: Run build script
+    - name: Checkout
+    - uses: actions/checkout@v2
+
+    - name: Build
       shell: bash
       run: |
          chmod +x ./scripts/build.sh
@@ -18,7 +21,6 @@ jobs:
          sudo make install
          cd ~/work/fredzia.github.io/fredzia.github.io/scripts
          ls -1 -d "$PWD/"*
-    - uses: actions/checkout@v2
          
     - name: Upload
     - uses: actions/upload-artifact@v4
