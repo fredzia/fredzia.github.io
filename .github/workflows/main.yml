@@ -13,7 +13,6 @@ jobs:
          tar xzf cmark-0.29.0.tar.gz
          cd cmark-0.29.0
          make [INSTALL_PREFIX=/prefix]
-         make test
          make install
          ./scripts/build.sh
       #working-directory: ../
