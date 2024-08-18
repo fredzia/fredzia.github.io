@@ -9,8 +9,13 @@ jobs:
     - name: Run build script
       run: |
          chmod +x ./scripts/build.sh
+         curl -LJO https://github.com/commonmark/cmark/archive/0.29.0.tar.gz
+         tar xzf cmark-0.29.0.tar.gz
+         cd cmark-0.29.0
+         make [INSTALL_PREFIX=/prefix]
+         make test
+         make install
          ./scripts/build.sh
-         cd ..
       #working-directory: ../
       shell: bash
 
