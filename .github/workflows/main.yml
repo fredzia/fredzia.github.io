@@ -21,11 +21,6 @@ jobs:
     - uses: actions/checkout@v2
          
     - name: Upload
-      shell: bash
-      run: |
-        cd ~
-        cd work/fredzia.github.io/fredzia.github.io/
-        ls
     - uses: actions/upload-artifact@v4
       with:
         name: html
