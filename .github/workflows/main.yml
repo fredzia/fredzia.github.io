@@ -27,7 +27,7 @@ jobs:
     steps:
     - name: Init new repo and commit generated files
       run: |
-        cd ~ && ls
+        cd ~/work/fredzia.github.io/fredzia.github.io/scripts && ls
       #git init
       #git add -A
       #git config --local user.email "action@github.com"
