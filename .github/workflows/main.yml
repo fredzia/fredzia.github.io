@@ -7,17 +7,18 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run build script
+      working-directory: scripts/
+      shell: bash
       run: |
+         ls
          chmod +x ./build.sh
          curl -LJO https://github.com/commonmark/cmark/archive/0.29.0.tar.gz
          tar xzf cmark-0.29.0.tar.gz
          cd cmark-0.29.0
          make [INSTALL_PREFIX=/prefix]
          sudo make install
-         cd ~ && ls
+         cd && ls
          ./build.sh
-      working-directory: scripts/
-      shell: bash
 
   upload-artifact:
     needs: build
