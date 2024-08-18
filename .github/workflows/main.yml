@@ -10,14 +10,14 @@ jobs:
       working-directory: scripts/
       shell: bash
       run: |
-         ls
          chmod +x ./build.sh
          curl -LJO https://github.com/commonmark/cmark/archive/0.29.0.tar.gz
          tar xzf cmark-0.29.0.tar.gz
          cd cmark-0.29.0
          make [INSTALL_PREFIX=/prefix]
          sudo make install
-         .~/home/runner/work/fredzia.github.io/fredzia.github.io/scripts/build.sh
+         ls
+         .~/runner/work/fredzia.github.io/fredzia.github.io/scripts/build.sh
 
   upload-artifact:
     needs: build
