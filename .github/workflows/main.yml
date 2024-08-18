@@ -33,7 +33,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
       - run: |
-           cd ~/work/fredzia.github.io/fredzia.github.io/
+           cd ~/work/fredzia.github.io/fredzia.github.io/index/
            ls
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4.0.0
