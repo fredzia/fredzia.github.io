@@ -30,12 +30,6 @@ jobs:
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v4
-        with:
-          path: ~/work/fredzia.github.io/fredzia.github.io/
-      - run: |
-           cd html/
-           ls
-           ./scripts/push.sh
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4.0.0
             
