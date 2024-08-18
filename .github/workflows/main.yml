@@ -16,7 +16,7 @@ jobs:
            make [INSTALL_PREFIX=/prefix]
            sudo make install
            cd ~/work/fredzia.github.io/fredzia.github.io/scripts
-           ls -1 -d "$PWD/"*
+           ./build.sh
          
       - name: Upload artifact
         uses: actions/upload-artifact@v4
