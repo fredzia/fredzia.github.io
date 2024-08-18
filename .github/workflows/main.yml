@@ -25,12 +25,12 @@ jobs:
     - name: Upload
       shell: bash
       run: |
-        cd ~
+        cd ~/work/fredzia.github.io/fredzia.github.io
         ls
     - uses: actions/upload-artifact@v4
       with:
         name: html
-        path: work/fredzia.github.io/fredzia.github.io/index.html
+        path: ~/work/fredzia.github.io/fredzia.github.io/index.html
         if-no-files-found: error
         overwrite: true
 
