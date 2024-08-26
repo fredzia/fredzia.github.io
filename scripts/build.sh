@@ -16,7 +16,7 @@ cat <<EOF > "${output_html}"
 <head>
     <meta charset="utf-8">
     <title>diario de canciones</title>
-    <meta name="keywords" content="diario de canciones, fredzia">
+    <meta name="keywords" content="fredzia">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
         @font-face {
@@ -30,9 +30,7 @@ cat <<EOF > "${output_html}"
         code {font-size: 1.6em; color:#999;}
         h1, h2 {font-weight: bold; font-size: 1.6em; margin-bottom: 0;}
         hr {margin-top: 4em; border: none; background-color: #555; color: #555; height: 1px;}
-        h5 {color: #999
-        
-        ; margin: 0; margin-bottom: 2em}
+        h5 {color: #999; margin: 0; margin-bottom: 2em}
         a {color: #aaa;}
         img {margin-top: 4em; margin-bottom: 2em; max-width:100%;}
         input {font-family: inherit;}
